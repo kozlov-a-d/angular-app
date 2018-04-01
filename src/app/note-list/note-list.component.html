@@ -1,0 +1,25 @@
+<p>
+  note-list works!
+</p>
+
+<button (click)="onCreate()">Create</button>
+
+<table class="nice_table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Complited</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let note of notes">
+            <td>{{note.id}}</td>
+            <td [class.is-complited]="note.complited">{{note.name}}</td>
+            <td>
+                <button (click)="onEdit(note)">Edit</button>
+                <button (click)="onDelete(note)">Delete</button>
+            </td>
+        </tr>
+    </tbody>  
+</table>

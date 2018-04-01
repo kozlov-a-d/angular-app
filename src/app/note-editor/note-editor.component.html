@@ -1,0 +1,15 @@
+<p>
+    note-editor works!
+</p>
+
+<div *ngIf="note">
+    <div>
+        <label for="name">Name</label>
+        <input [(ngModel)]="note.name" type="text" name="name">
+    </div>
+    <div>
+        <label for="comlited">Comlited</label>
+        <input [(ngModel)]="note.complited" type="checkbox" name="complited">
+    </div>
+    <button (click)="onBack()">Back</button>
+</div>

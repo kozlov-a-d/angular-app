@@ -1,0 +1,72 @@
+$color-border: #e8eaeb;
+$color-striped: #e8eaeb;
+$color-hover: darken(#e8eaeb, 10%);
+$padding: 15px;
+
+$border-radius: 5px;
+
+table {
+    border: 1px solid $color-border;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 0;
+    th {
+        border: 1px solid $color-border;
+        padding: 0;
+    }
+    td {
+        border: 1px solid $color-border;
+        padding: 0;
+        &.is-complited{
+            text-decoration: line-through;    
+        }
+    }
+    &.noborder {
+        border: none;
+        td,
+        th {
+            border: none;
+        }
+    }
+    &.cellpadding {
+        &_5 {
+            td,
+            th {
+                padding: 5px;
+            }
+        }
+        &_7 {
+            td,
+            th {
+                padding: 7px;
+            }
+        }
+        &_10 {
+            td,
+            th {
+                padding: 10px;
+            }
+        }
+        &_15 {
+            td,
+            th {
+                padding: 15px;
+            }
+        }
+    }
+}
+
+.nice_table {
+    border: none;
+    border-radius: 5px;
+    th {
+        padding: $padding;
+        border: none;
+    }
+    td {
+        text-align: left;
+        padding: $padding;
+        border: none;
+        border-bottom: 1px solid $color-border;
+    }
+}
